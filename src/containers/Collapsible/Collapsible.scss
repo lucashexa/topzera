@@ -1,0 +1,51 @@
+.ct- {
+  &collapsible {
+    &__wrapper {
+      padding: 1rem;
+    }
+    &__toggle {
+      display: none;
+      &__label {
+        font-weight: var(--weight-normal);
+        font-family: "Segoe UI", sans-serif;
+        color: var(--text-dark);
+        text-transform: capitalize;
+        display: block;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: all 0.25s ease-out;
+        &:before {
+          content: " ";
+          display: inline-block;
+
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid currentColor;
+
+          vertical-align: middle;
+          margin-right: 0.7rem;
+          transform: translateY(-2px);
+
+          transition: transform 0.2s ease-out;
+        }
+      }
+    }
+    &__content {
+      max-height: 0px;
+      overflow: hidden;
+
+      transition: max-height 0.25s ease-in-out;
+    }
+  }
+}
+.ct-collapsible__toggle:checked + .ct-collapsible__toggle__label + .ct-collapsible__content {
+  max-height: 100vh;
+}
+.ct-collapsible__toggle:checked + .ct-collapsible__toggle__label:before {
+  transform: rotate(90deg) translateX(-2px);
+}
+
+.ct-collapsible__toggle:checked + .ct-collapsible__toggle__label {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

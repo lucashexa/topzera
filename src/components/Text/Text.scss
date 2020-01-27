@@ -1,0 +1,63 @@
+.ct- {
+  &text {
+    font-weight: var(--weight-normal);
+    font-family: "Segoe UI", sans-serif;
+    color: var(--text-dark);
+    margin-left: 1rem;
+    text-transform: none;
+    display: inline-block;
+    &--smallest {
+      font-size: var(--text-smallest);
+    }
+    &--smaller {
+      font-size: var(--text-smaller);
+    }
+    &--small {
+      font-size: var(--text-small);
+    }
+    &--normal {
+      font-size: var(--text-normal);
+    }
+    &--big {
+      font-size: var(--text-big);
+    }
+    &--bigger {
+      font-size: var(--text-bigger);
+    }
+    &--biggest {
+      font-size: var(--text-biggest);
+    }
+    &--title {
+      text-transform: capitalize;
+    }
+    &--heavy {
+      font-weight: var(--weight-high);
+    }
+    &--priority {
+      &-medium{
+        font-weight: var(--weight-high);
+      }
+      &-high {
+        font-weight: var(--weight-high);
+        background: var(--priority-medium);
+      }
+      &-critical {
+        font-weight: var(--weight-high);
+        background: var(--priority-highest);
+        color: var(--text-light)
+      }
+    }
+  }
+  &link {
+    text-decoration: underline;
+    &--internal {
+      color: var(--text-dark);
+    }
+    &--external {
+      color: var(--highlight-dark);
+    }
+    &--selected {
+      color: var(--link-selected);
+    }
+  }
+}

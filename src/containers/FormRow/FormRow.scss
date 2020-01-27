@@ -1,0 +1,15 @@
+.ct- {
+  &form__row {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: end;
+
+    &__title {
+      margin: 0.5rem 0.5rem 0 1rem;
+      font-weight: var(--weight-normal);
+      font-family: "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      text-transform: capitalize;
+    }
+  }
+}

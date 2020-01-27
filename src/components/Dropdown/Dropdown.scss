@@ -1,0 +1,47 @@
+.ct- {
+  &wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  &dropdown {
+    border-color: var(--accent-regular);
+    border-width: 1px;
+    margin: 0.5rem 0 0.5rem 1rem;
+    min-width: 7rem;
+    width: calc(100% - 1rem);
+    box-sizing: border-box;
+    height: 2.5rem;
+    &:focus,
+    &:hover {
+      border-color: var(--highlight-alternate);
+    }
+    &__container {
+      display: inline-block;
+    }
+    &--disabled {
+      pointer-events: none;
+      background: var(--accent-regular);
+    }
+    &--search {
+      &__icon {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &__label {
+      margin: 0.5rem 0.5rem 0 1rem;
+      font-weight: var(--weight-normal);
+      font-family: "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      text-transform: capitalize;
+      &__required-indicator {
+        margin-left: -0.7rem;
+        color: var(--priority-highest);
+        font-weight: 800;
+      }
+    }
+  }
+}

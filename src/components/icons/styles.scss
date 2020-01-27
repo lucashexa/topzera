@@ -1,0 +1,128 @@
+.ct {
+  &-sidePanel{ 
+    // padding: 8px;
+    display: flex;
+    width: 58px;
+    height: 58px;
+    max-width: 58px;
+    max-height: 58px;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    div{
+      width: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      // padding: 10px;
+      background-color: #C5DDEE;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    svg.EventForm {
+      fill:#2562a5;
+    }
+  
+    svg.CommentsAndRemark {
+      fill:none;
+      stroke:#2562a5;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-width:2px;
+    }
+  
+    svg.Attachement{
+      fill:none;
+      stroke:#2562a5;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      stroke-width:1.367px;
+    }
+  
+    svg.SuplementalInfo{
+      fill:#2562a5;}
+      .b{
+        fill:none;
+        stroke:#2562a5;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-width:1.231px;
+    }
+    svg.LocationOfIntereset{
+      padding: 0 3px;
+      fill:#2562a5;
+    }
+  
+    svg.InformerReturns{
+      fill:#2562a5;
+    }
+  
+    svg.Agency{
+      fill:#2562a5;
+      }
+      .b,
+      .c{fill:none;
+      }
+      .c{
+        stroke:#2562a5;
+        stroke-width:2px;
+      }
+    } 
+
+    &--active{
+      background-color: #C5DDEE;
+      border-right: 5px solid #134B96;
+
+      div{
+        background-color: #fff;
+      }
+    }
+
+
+    
+    &--quantity
+    h1{
+      box-sizing: border-box;
+      z-index: 1;
+      font-family: "Segoe UI";
+      font-weight: Semibold;
+      // background-position: center;
+      position: absolute;
+      margin-top: 35px;
+      margin-left: 35px;
+      font-size: 11px;
+      background-color: #686868;
+      color: #fff;
+      padding: 2px 5px;
+      border-radius: 5px;
+      text-align: center;
+      
+    }
+  }
+  &-StackedEvents{
+    div{
+      background-image: url(svgs/StackedIncidentsIconPng.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40px;
+      width: 42px;
+      height: 28px;
+      position: relative;
+      h1{
+        box-sizing: border-box;
+        z-index: 1;
+        font-family: "Segoe UI";
+        font-weight: bold;
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 8px;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+}
+

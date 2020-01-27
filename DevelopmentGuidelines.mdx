@@ -1,0 +1,110 @@
+---
+name: Development Guidelines
+---
+
+# Development Guidelines
+
+<p>
+  Here are a few guidelines for the development of the library. Try to keep to this guidelines to ensure maximum readability and ease of use for the components created here.
+</p>
+
+## Project Structure
+
+> Listed below is the outline of the project`s folder structure, with nomenclature and explanations for the contents to be inserted on each folder
+
+- assets (every static file needed, e.g. fonts, images, etc)
+  - fonts
+- components (every component <strong>--please read the topic on Component x Container before creating a component--</strong> should be created here, please avoid using subfolders)
+  - any component
+- containers (same as above)
+  - any container
+- shared (all shared non-static files)
+  - css
+    - variables (please use CSS variables, not SASS variables)
+  - hoc (higher order component <a target="__blank" href="https://pt-br.reactjs.org/docs/higher-order-components.html">Documentation</a>)
+
+
+## Components vs Containers
+
+In this project we have both *Components* and *Containers* and the difference can be a little fuzzy if you are not used to the concept, so here are some ground rules:
+
+### You should use a *Component* if:
+
+- your component does not receive other components as children as a default
+- your component is *(or appears to be)* a single element
+- you don`t plan to use your component in other components
+
+### You should use a *Container* if:
+
+- your component <strong>will</strong> have other components being passed as children
+- your component is not a single element
+- you don`t plan to use your component in other components
+
+<strong>Important:</strong> If you plan to use your component in other components you should neither create a *Component* nor a *Container*, please create a *HOC*
+
+## How to create a component
+
+<strong>Important:</strong> component in this case refers to *Containers*, *Components* and *HOC*
+
+Every component should have it`s own folder in the project, as follows
+
+- Example(always uppercase the first letter of each word)
+  - Example.tsx
+  - Example.scss
+  - index.js
+
+### Template component Files
+
+All component files should have the same structure, as follows:
+
+#### index.js
+
+```jsx
+import Example from "./Example.tsx"
+export default Example;
+```
+
+#### Component.tsx
+
+```jsx
+import * as React from 'react';
+import style from './Example.scss';
+
+const Example:React.SFC<ExampleProps> = (props) => {
+    return (
+     //your code here
+    );
+}
+
+interface ExampleProps {
+  prop:type
+}
+
+Example.defaultProps = {
+  prop:defaultValue
+}
+export default Example;
+```
+
+#### Component.scss
+
+```scss
+.ct-{
+  &example {
+    //your styles here
+  }
+}
+```
+
+<strong>Important:</strong> To use styles on components use React Modules, as example below:
+
+```jsx
+const Example:React.SFC<ExampleProps> = (props) => {
+    return (
+     <div className={style['ct-example']} >styled div</div>
+    );
+}
+```
+
+Avoid using styles inline, try to always add custom classes for your styles, this is the more semantic method, and is recommended.
+

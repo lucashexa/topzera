@@ -1,0 +1,40 @@
+.ct- {
+  &wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  &textarea {
+    border-color: var(--accent-regular);
+    border-width: 1px;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 1rem;
+    &:focus,
+    &:hover {
+      border-color: var(--highlight-alternate);
+    }
+    &--disabled {
+      pointer-events: none;
+      background: var(--accent-regular);
+    }
+    &--search {
+      &__icon {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &__label {
+      margin: 0.5rem 0.5rem 0 1rem;
+      font-weight: var(--weight-normal);
+      font-family: "Segoe UI", sans-serif;
+      color: var(--text-dark);
+      text-transform: capitalize;
+      &__required-indicator {
+        margin-left: -0.7rem;
+        color: var(--priority-highest);
+        font-weight: 800;
+      }
+    }
+  }
+}

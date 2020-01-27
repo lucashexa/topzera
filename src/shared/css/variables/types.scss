@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../../../assets/fonts/Segoe\ UI.ttf");
+}
+
+html {
+  font-size: 12px;
+}
+
+:root {
+  //font family
+  --main-font: "Segoe UI", sans-serif;
+  //font size
+  --text-smallest: 1rem;
+  --text-smaller: 1.1rem;
+  --text-small: 1.2rem;
+  --text-normal: 1.3rem;
+  --text-big: 1.5rem;
+  --text-bigger: 1.7rem;
+  --text-biggest: 2.1rem;
+  //font weight
+  --weight-normal: 400;
+  --weight-high: 800;
+}

@@ -1,0 +1,50 @@
+{
+  // "compilerOptions": {
+  //   "allowSyntheticDefaultImports": true,
+  //   "outDir": "./dist/", // path to output directory
+  //   "sourceMap": true, // allow sourcemap support
+  //   "strictNullChecks": true, // enable strict null checks as a best practice
+  //   "module": "es6", // specify module code generation
+  //   "jsx": "react", // use typescript to transpile jsx to js
+  //   "target": "es5", // specify ECMAScript target version
+  //   "allowJs": true // allow a partial TypeScript and JavaScript codebase
+  // },
+  // "include": [
+  //   "./src/"
+  // ]
+
+  "compileOnSave": true,
+  "allowTsxInNodeModules": true,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es6",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "exclude": [
+    "node_modules",
+    "dev_server.js"
+  ],
+  "include": [
+    "src"
+  ]
+}

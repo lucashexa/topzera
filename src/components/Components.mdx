@@ -1,0 +1,89 @@
+---
+name: Components
+route: Components
+---
+
+# Components
+
+<p>Lists existing components in library and their corresponding properties</p>
+<p>Properties naming pattern</p>
+<ul>
+  <li>
+    propertyName (<strong>required</strong>): acceptedValues <span style="font-style: italic">(defaultValue)</span>
+  </li>
+</ul>
+
+## Button
+
+### Properties
+1. type: ["primary", "secondary"] <span style="font-style: italic">("secondary")</span>
+2. disabled: boolean <span style="font-style: italic">(false)</span>
+3. click: function
+4. combo: boolean <span style="font-style: italic">(false)</span>
+5. list: array[string]
+6. listClick: function
+7. <strong>children</strong>
+
+### Basic Usage
+```jsx
+import React, { Component } from 'react'
+
+import CT from 'ct-brazil-components'
+
+class Example extends Component {
+  render () {
+    return (
+      <CT.Button>Button Text (<img src="http://www.placecage.com/16/16" /> or image)</CT.Button>
+    )
+  }
+}
+```
+
+### Known Issues
+1. Dropdown indicator for combo is sometimes not the same size as actual Button
+2. Opening List for button is sometimes breaking page (needs also to adjust style)
+
+## Dropdown
+
+### Properties
+1. disabled: boolean <span style="font-style: italic">(false)</span>
+2. change: function
+3. required: boolean <span style="font-style: italic">(false)</span>
+4. label: string
+5. <strong>options</strong>: array[string] or array[object'label, value']
+
+### Basic Usage
+```jsx
+import React, { Component } from 'react'
+
+import CT from 'ct-brazil-components'
+
+class Example extends Component {
+  render () {
+    return (
+      <CT.Dropdown options=["one", "two"] />
+    )
+  }
+}
+```
+
+### Known Issues
+No known issues
+
+## Input
+
+<p><strong>Important:</strong> The suggestions array receives any object, and for display you need to pass the object property that is going to represent the value as a string in the suggestionValue property. If you need a different value than the labl you should pass the label as string on the suggestionLabel property</p>
+
+### Properties
+1. <strong>type</strong>: HTML5 input type properties <a target="__blank" href="https://www.w3schools.com/html/html_form_input_types.asp">(view options)</a> <span style="font-style: italic">("text")</span>
+2. value: any
+3. disabled: boolean <span style="font-style: italic">(false)</span>
+4. change: function
+5. label: string
+6. required: boolean <span style="font-style: italic">(false)</span>
+7. suggestions: [{}]
+8. suggestionLabel: string
+8. suggestionValue: string
+
+### Known Issues
+1. Sometimes the input datalist does not show new suggestions, this seems to happen randonly, so it needs more digging
